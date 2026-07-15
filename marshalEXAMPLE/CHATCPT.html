@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martial Arts Universe</title>
+    <style>
+        /* Purn page cha look ani feel */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        /* Hero / Welcome Section */
+        .welcome-section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), 
+                        url('https://images.unsplash.com/photo-1555597673-b21d5c935865?q=80&w=1600') no-repeat center center/cover;
+        }
+
+        .welcome-section h1 {
+            font-size: 4rem;
+            margin: 0;
+            color: #ffcc00;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .welcome-section p {
+            font-size: 1.5rem;
+            color: #cccccc;
+            margin-top: 10px;
+        }
+
+        .scroll-btn {
+            margin-top: 30px;
+            padding: 12px 25px;
+            font-size: 1rem;
+            background-color: #ffcc00;
+            color: #000;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .scroll-btn:hover {
+            background-color: #ffffff;
+            transform: scale(1.05);
+        }
+
+        /* Martial Arts Section */
+        .martial-arts-section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .martial-arts-section h2 {
+            font-size: 2.5rem;
+            color: #ffcc00;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .martial-arts-section h2::after {
+            content: '';
+            display: block;
+            width: 60%;
+            height: 3px;
+            background: #ffcc00;
+            margin: 10px auto 0 auto;
+        }
+
+        /* Grid Layout Legends sathi */
+        .legends-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .legend-card {
+            background-color: #1e1e1e;
+            border-radius: 15px;
+            overflow: hidden;
+            width: 300px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .legend-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(255, 204, 0, 0.3);
+        }
+
+        .legend-card img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+
+        .legend-info {
+            padding: 20px;
+        }
+
+        .legend-info h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.5rem;
+            color: #ffffff;
+        }
+
+        .legend-info p {
+            color: #ffcc00;
+            margin: 0;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Welcome Section -->
+    <div class="welcome-section">
+        <h1>Welcome</h1>
+        <p>To the World of Martial Arts</p>
+        <a href="#explore" class="scroll-btn">Explore Legends</a>
+    </div>
+
+    <!-- 2. Martial Arts & Legends Section -->
+    <div class="martial-arts-section" id="explore">
+        <h2>Martial Arts Legends</h2>
+        
+        <div class="legends-container">
+            <!-- Bruce Lee Card -->
+            <div class="legend-card">
+                <!-- Direct HD placeholder image for Bruce Lee style -->
+                <img src="https://images.unsplash.com/photo-1555597673-b21d5c935865?q=80&w=600" alt="Bruce Lee">
+                <div class="legend-info">
+                    <h3>Bruce Lee</h3>
+                    <p>Jeet Kune Do</p>
+                </div>
+            </div>
+
+            <!-- Jackie Chan Card -->
+            <div class="legend-card">
+                <!-- Direct HD placeholder image for Martial Arts/Jackie style -->
+                <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?q=80&w=600" alt="Jackie Chan">
+                <div class="legend-info">
+                    <h3>Jackie Chan</h3>
+                    <p>Kung Fu & Kung Fu Comedy</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
